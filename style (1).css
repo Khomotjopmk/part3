@@ -1,0 +1,549 @@
+/* ========================================
+   KHOMOTJO FOOD SHOP - RESPONSIVE STYLESHEET
+   ======================================== */
+
+/* ========== VARIABLES & GLOBAL STYLES ========== */
+:root {
+    --primary-color: #d4623f;
+    --secondary-color: #f39c42;
+    --dark-color: #4f2c50;
+    --light-color: #ecf0f138;
+    --white: #ffffff75;
+    --text-color: #33333385;
+    --border-color: #bdc3c72d;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+abbr {
+    text-decoration: none;
+    border-bottom: 1px dotted var(--primary-color);
+    cursor: help;
+}
+
+/* ========== HEADER & NAVIGATION ========== */
+header {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+header h1 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* ========== MAIN CONTENT ========== */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+article {
+    background-color: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* ========== FIGURE & IMAGES ========== */
+figure {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    display: block;
+    margin: 0 auto 0.5rem;
+}
+
+figcaption {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* ========== ASIDE & DETAILS ========== */
+aside {
+    background-color: #e6e8ff38;
+    border-left: 4px solid var(--secondary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 5px;
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+details {
+    margin-top: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+summary:hover {
+    background-color: #f0f0f048;
+}
+
+details p {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--secondary-color);
+}
+
+/* ========== TABLES ========== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    padding: 1rem;
+    background-color: var(--light-color);
+    text-align: left;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f92a;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f009;
+    transition: background-color 0.3s ease;
+}
+
+tfoot {
+    background-color: var(--light-color);
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+tfoot td {
+    padding: 1rem;
+}
+
+/* ========== FORMS ========== */
+fieldset {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+legend {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(212, 98, 63, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    font-family: 'Courier New', monospace;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+button[type="reset"] {
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
+button[type="reset"]:hover {
+    background-color: #a9afb5;
+}
+
+/* ========== ADDRESS & CONTACT ========== */
+address {
+    background-color: var(--text-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    font-style: normal;
+    line-height: 1.8;
+}
+
+address a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+address a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    border-top: 3px solid var(--primary-color);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ========== LINKS ========== */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* ========== HORIZONTAL RULE ========== */
+hr {
+    border: none;
+    border-top: 2px solid var(--primary-color);
+    margin: 2rem 0;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        margin: 1rem auto;
+    }
+
+    article {
+        padding: 1.5rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.75rem;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    header {
+        padding: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+
+    nav ul {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        margin: 0.5rem auto;
+        padding: 0.5rem;
+    }
+
+    article {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    aside {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    table {
+        font-size: 0.8rem;
+        margin: 1rem 0;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    figure img {
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        font-size: 0.8rem;
+    }
+
+    fieldset {
+        padding: 0.75rem;
+    }
+
+    legend {
+        font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    address {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 1.5rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    hr {
+        margin: 1rem 0;
+    }
+}
+
+/* Large screens (1024px and above) */
+@media (min-width: 1024px) {
+    main {
+        max-width: 1200px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    figure img {
+        max-width: 600px;
+    }
+
+    table {
+        font-size: 1rem;
+    }
+}
